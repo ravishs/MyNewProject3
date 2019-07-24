@@ -1,0 +1,75 @@
+/* UUID: 859371-797403-215467-110420- */ 
+
+html {
+    margin: auto;
+    width: min-content;
+}
+body {
+    margin: 0;
+    width: min-content;
+}
+img {
+  border: 0px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+.viewport {
+  user-select: none;
+}
+
+.element {
+  cursor: move;
+}
+
+.element * {
+  vector-effect: non-scaling-stroke;
+}
+
+.viewport {
+  user-select: none;
+  width: 100%;
+  height: 100%;
+}
+
+.element {
+  cursor: default;
+  position: absolute;
+  overflow: hidden;
+}
+
+.element.fc.Image {
+  overflow: hidden;
+  text-align: center;
+}
+
+.element.fc.Screen {
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 6px;
+  background-size: cover;
+  overflow: visible;
+}
+
+.element.fc.Screen .screen-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+}
+
+.element.fc.Screen .screen-container img {
+  width: 100%;
+}
+
+.snapp-html5.fc.Screen {
+  overflow: hidden;
+  position: relative;
+  margin: auto;
+  display: none;
+  transform: none !important;
+}

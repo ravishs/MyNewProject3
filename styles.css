@@ -1,4 +1,4 @@
-/* UUID: 859371-797403-215467-110420- */ 
+/* UUID: 837361-792183-822679-937985- */ 
 
 html {
     margin: auto;
@@ -8,16 +8,72 @@ body {
     margin: 0;
     width: min-content;
 }
+audio, canvas, progress, video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
 img {
   border: 0px;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+button, input, optgroup, select, textarea {
+  margin: 0px;
+  font: inherit;
+  color: inherit;
+}
+
+input {
+  line-height: normal;
 }
 
 * {
   box-sizing: border-box;
 }
 
+input, button, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
 img {
   vertical-align: middle;
+}
+
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0px;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.label {
+  display: inline;
+  padding: 0.2em 0.6em 0.3em;
+  font-size: 75%;
+  font-weight: bold;
+  line-height: 1;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25em;
 }
 
 .viewport {
@@ -44,9 +100,104 @@ img {
   overflow: hidden;
 }
 
-.element.fc.Image {
-  overflow: hidden;
-  text-align: center;
+.wordwrap {
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+}
+
+body, input, button, select, textarea {
+  font-family: proxima_nova, Arial, Helvetica, sans-serif;
+}
+
+input, textarea, select {
+  font-size: 13px;
+  font-weight: lighter;
+}
+
+.element.fc.Button .btn {
+  border-style: none;
+  border-radius: 0px;
+  width: 100%;
+  height: 100%;
+  font-weight: normal;
+  background-size: 100%;
+  cursor: inherit;
+}
+
+.element.fc.Button .btn.system {
+  display: flex;
+  align-items: center;
+}
+
+.element.fc.Button .btn .img-container {
+  height: 100%;
+  margin: 0px;
+}
+
+.element.fc.Button .btn.system .img-container {
+  max-height: 70%;
+  position: absolute;
+  left: 15px;
+}
+
+.element.fc.Button .btn.system div img {
+  width: auto;
+  height: 100%;
+}
+
+.element.fc.Textbox .textView {
+  width: 100%;
+  height: 100%;
+  resize: none;
+  padding-left: 5px;
+}
+
+.element.fc.Textbox .textView-wrapper {
+  width: 100%;
+  height: 100%;
+  display: table;
+  position: relative;
+}
+
+.textView {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  box-shadow: none;
+  height: 80%;
+  padding-left: 15px;
+  border-style: solid;
+  outline: none;
+}
+
+.element.fc.Label {
+  border-style: none;
+}
+
+.element.fc.Label .label-wrapper {
+  width: 100%;
+  height: 100%;
+  display: table;
+  position: relative;
+}
+
+.element.fc.Label .label.wordwrap {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  word-break: break-word;
+  border-radius: 0px;
+}
+
+.element.fc.Label .label {
+  width: 100%;
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 0px;
+  padding-right: 0px;
+  font-weight: normal;
 }
 
 .element.fc.Screen {
@@ -72,4 +223,97 @@ img {
   margin: auto;
   display: none;
   transform: none !important;
+}
+
+.c3 svg {
+  font: 10px sans-serif;
+}
+
+.c3 line, .c3 path {
+  fill: none;
+  stroke: rgb(0, 0, 0);
+}
+
+.c3 text {
+  user-select: none;
+}
+
+.c3-bars path, .c3-event-rect, .c3-legend-item-tile, .c3-xgrid-focus, .c3-ygrid {
+  shape-rendering: crispedges;
+}
+
+.c3-grid line {
+  stroke: rgb(170, 170, 170);
+}
+
+.c3-xgrid, .c3-ygrid {
+  stroke-dasharray: 3, 3;
+}
+
+.c3-text.c3-empty {
+  fill: gray;
+  font-size: 2em;
+}
+
+.c3-line {
+  stroke-width: 1px;
+}
+
+.c3-brush .extent {
+  fill-opacity: 0.1;
+}
+
+.c3-legend-item {
+  font-size: 12px;
+}
+
+.c3-tooltip-container {
+  z-index: 10;
+}
+
+.c3-area {
+  stroke-width: 0;
+  opacity: 0.2;
+}
+
+.c3-chart-arcs-title {
+  dominant-baseline: middle;
+  font-size: 1.3em;
+}
+
+.element.fc.DrawViewContainer {
+  width: 100%;
+  position: absolute;
+}
+
+.drawViewPic {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  pointer-events: none;
+}
+
+.textView {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  box-shadow: none;
+  height: 80%;
+  padding-left: 15px;
+  border-style: solid;
+  outline: none;
+}
+
+.element.fc.Shape {
+  width: 100%;
+  background: transparent;
+}
+
+.rectangle {
+  width: 100%;
+  height: 100%;
 }
